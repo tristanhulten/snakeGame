@@ -29,11 +29,13 @@ namespace snakeGame
 
         private readonly int rows = 15, cols = 15;
         private readonly Image[,] gridImages;
+        private gameStatus GameStatus;
 
         public MainWindow()
         {
             InitializeComponent();
-            gridImages = SetupGrid(); 
+            gridImages = SetupGrid();
+            GameStatus = new gameStatus(rows, cols);
         }
         
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -68,5 +70,25 @@ namespace snakeGame
 
             return images;
         }
+        
+        private void Draw()
+        {
+            DrawGrid();
+        }
+        
+        private void DrawGrid()
+        {
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < cols; c++)
+                {
+                    gridValues gridVal = GameStatus.Grid[r, c];
+                    gridImages[r, c].Source = GridValToImage[gridVal]; 
+                }
+            }
+        }
     }
 }
+        
+        
+      
