@@ -20,7 +20,7 @@ namespace snakeGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Dictionary<gridValues, ImageSource> GridValToImage = new()
+        private readonly Dictionary<gridValues, ImageSource> GridValToImage = new()
         {
             { gridValues.Empty, Images.Empty},
             { gridValues.Snake, Images.Body },
