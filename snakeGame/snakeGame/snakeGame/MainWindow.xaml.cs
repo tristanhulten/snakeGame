@@ -35,6 +35,16 @@ namespace snakeGame
             InitializeComponent();
             gridImages = SetupGrid(); 
         }
+        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_KeyDown(object sender, KeyboardEventArgs e)
+        {
+
+        }
 
         private Image[,] SetupGrid()
         {
