@@ -4,6 +4,7 @@ using System.Windows.Media.Imaging;
 
 namespace snakeGame
 {
+    // Denna class avgör vilka bilder som ska laddas in och namnger dom
     public static class Images
     {
         public readonly static ImageSource Empty = LoadImage("Empty.png");
