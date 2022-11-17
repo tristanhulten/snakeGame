@@ -18,7 +18,7 @@ namespace snakeGame
         {
             return new position(row + dir.rowOffset, col + dir.colOffset );
         }
-
+        // Använder mig av den inbyggda funktionen "override equals and get hashcode" som gör att position klassen kan användas som en nyckel i ett dictionary
         public override bool Equals(object obj)
         {
             return obj is position position &&
