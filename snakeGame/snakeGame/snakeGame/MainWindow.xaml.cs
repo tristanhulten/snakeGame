@@ -105,6 +105,7 @@ namespace snakeGame
         private void Draw()
         {
             DrawGrid();
+            ScoreText.Text = $"SCORE {GameStatus.Score}";
         }
         
         private void DrawGrid()
